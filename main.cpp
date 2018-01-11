@@ -12,8 +12,8 @@ int main() {
 	signed long long suma = 0;
 	signed long long iterator = 0;
 	signed long long new_value = 0;
-	ifstream myfile ("in1.txt");
-	ofstream outfile ("out1.txt");
+	ifstream myfile ("in2.txt");
+	ofstream outfile ("out2.txt");
 		
 	if (myfile.is_open()){
 		
