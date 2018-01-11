@@ -12,7 +12,7 @@ int main() {
 	signed long long suma = 0;
 	signed long long iterator = 0;
 	signed long long new_value = 0;
-	ifstream myfile ("Intest1.txt");
+	ifstream myfile ("in1.txt");
 	ofstream outfile ("out1.txt");
 		
 	if (myfile.is_open()){
@@ -34,6 +34,14 @@ int main() {
 					suma = 0;
 					break;
 				}
+				else if (next_operation == 4){
+					suma = suma * new_value;
+				}
+				else if (next_operation == 5){
+					for (int i=1; i<new_value; i++){
+						suma = suma*suma;
+					}
+				}
 				else{
 					suma = stoi (line);
 				}
@@ -51,6 +59,12 @@ int main() {
 				}
 				else if (line[0] == '='){
 					next_operation = 2;
+				}
+				else if (line[0] == '*'){
+					next_operation = 4;
+				}
+				else if (line[0] == '^'){
+					next_operation = 5;
 				}
 			}
 			iterator++;
